@@ -1,10 +1,14 @@
 // index.js
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get('/', (req, res) => {
-  res.send('root api en marche!');
+app.get("/", (req, res) => {
+  res.send("root api en marche!");
+});
+
+app.get("/ping", (req, res) => {
+  res.status(200).json({ message: "Sandra est calissement belle!" });
 });
 
 app.listen(port, () => {
